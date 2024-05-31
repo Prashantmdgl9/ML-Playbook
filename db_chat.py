@@ -7,6 +7,7 @@ from langchain_community.agent_toolkits import create_sql_agent
 from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.prompts import MessagesPlaceholder
+import os
 
 
 class ChatAgent:
@@ -51,6 +52,7 @@ def ask_query(agent, question, memory):
 
 
 if __name__ == "__main__":
+    api_key = os.enviorn["api_key"]
     main = ChatAgent(api_key, model)
     agent, memory = main.defineAgentMemory()
     ask = ''
