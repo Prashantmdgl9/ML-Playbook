@@ -1,4 +1,4 @@
-api_key = "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"
+api_key = "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"
 model = "gpt-3.5-turbo"
 port = 5432
 db_password = '6-2RVDGOHifGjuaq4uWmRoQH9koMm5Eu'
