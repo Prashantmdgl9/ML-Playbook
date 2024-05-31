@@ -38,7 +38,7 @@ st.markdown(custom_title, unsafe_allow_html=True)
 # Initialize chat agent using API key from conf if not already initialized
 if "chat_agent" not in st.session_state:
     try:
-        api_key = conf.api_key
+        api_key = st.secrets['api_key']
         if api_key and ((api_key.startswith('sk-') and len(api_key) == 51) or (api_key.startswith('sk-proj-') and len(api_key) == 56)):
             st.session_state.chat_agent = db_chat.ChatAgent(api_key, conf.model)
             st.session_state.agent, st.session_state.memory = st.session_state.chat_agent.defineAgentMemory()
